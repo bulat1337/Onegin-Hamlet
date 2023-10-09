@@ -8,9 +8,8 @@
 
 void text_print(FILE *dest_file_ptr, char * *str_ptrs, size_t NLINES)
 {
-    for(int line_ID = 0; line_ID < NLINES; line_ID++)
+    for(size_t line_ID = 0; line_ID < NLINES; line_ID++)
     {
-        fprintf(dest_file_ptr, "%d - ", str_ptrs[line_ID][0]);
-        fprintf(dest_file_ptr, "%s\n",str_ptrs[line_ID]);
+        fprintf(dest_file_ptr, "%d - %s\n", str_ptrs[line_ID][0], str_ptrs[line_ID]);
     }
 }
